@@ -1,0 +1,8 @@
+@font-face {
+    font-family: "roboto-regular";
+    src: url(./assets/Roboto/static/Roboto_Condensed-Regular.ttf);
+}
+body{
+    margin: 0;
+    font-family: "roboto-regular";
+}
