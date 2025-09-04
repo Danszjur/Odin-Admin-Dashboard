@@ -1,3 +1,9 @@
+:root{
+    --navbar-color: hsl(188, 100%, 50%);
+    --navbar-hover: hsl(188, 100%, 30%);
+    --navbar-active: hsl(188, 100%, 40%);
+}
+
 @font-face {
     font-family: "roboto-regular";
     src: url(./assets/Roboto/static/Roboto_Condensed-Regular.ttf);
@@ -5,4 +11,99 @@
 body{
     margin: 0;
     font-family: "roboto-regular";
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    height: 100vh;
+    width: 100vw;
+}
+/*====================================================================*/
+.dashboard-menu-points>img{
+    height: 30px;
+    width: 30px;
+    vertical-align: middle;
+    margin-left: 20px;
+}
+p{
+    display: inline-block;
+    margin-left: 10px;
+}
+.dashboard-menu-points{
+    align-items: center;
+    transition: all;
+    transition-duration: 50ms;
+    user-select: none;
+    cursor: pointer;
+}
+br{
+    user-select: none;
+
+}
+nav>*:not(:first-child):hover{
+    background-color: var(--navbar-hover);
+}
+nav>*:not(:first-child):active{
+    background-color: var(--navbar-active);
+}
+nav{
+    width: 100%;
+    background-color: var(--navbar-color);
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+nav>.dashboard-menu-points:first-child>img{
+    width: 50px;
+    height: 50px;
+}
+nav>.dashboard-menu-points:first-child>p{
+    font-size: 1.6rem;
+}
+/*============================================================================================*/
+#svgImg{
+    height: 30px;
+    width: 30px;
+    padding: 0px;
+    background-color: none;
+    transition-property: all;
+    transition-duration: 100ms;
+}
+#svgImg:hover{
+    background-color: hsl(0, 0%, 80%);
+    padding: 10px;
+}
+#svgImg:active{
+    background-color: hsl(0, 0%, 90%);
+}
+/*============================================================================================*/
+header{
+    display: flex;
+    flex-direction: column;
+}
+.header-upper-side>img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.header-upper-side{
+    align-items: center;
+    justify-items: center;
+    display: grid;
+    grid-template-columns: 80px 780px 100px 100px 200px;
+    height: 80px;
+}
+.header-upper-side>input{
+    width: 80%;
+    padding: 10px 20px;
+    border-radius: 40px;
+    border: none;
+    background-color: hsl(0, 0%, 90%);
+    justify-self: baseline;
+}
+h3{
+    display: inline-block;
+}
+.header-lower-side{
+
 }
