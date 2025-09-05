@@ -1,7 +1,7 @@
 :root{
-    --navbar-color: hsl(188, 100%, 50%);
-    --navbar-hover: hsl(188, 100%, 30%);
-    --navbar-active: hsl(188, 100%, 40%);
+    --navbar-color: hsl(188, 77%, 40%);
+    --navbar-hover: hsl(188, 77%, 30%);
+    --navbar-active: hsl(188, 77%, 25%);
 }
 
 @font-face {
@@ -23,7 +23,7 @@ body{
     vertical-align: middle;
     margin-left: 20px;
 }
-p{
+nav>div>p{
     display: inline-block;
     margin-left: 10px;
 }
@@ -105,5 +105,43 @@ h3{
     display: inline-block;
 }
 .header-lower-side{
-
+    display: grid;
+    grid-template-columns: 150px 650px repeat(3, 120px);
+    height: 100px;
+    vertical-align: middle;
+    align-items: center;
+}
+.header-lower-side>img{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    justify-self: end;
+    vertical-align: middle;
+    margin-right: 30px;
+}
+.header-lower-side>div>p{
+    font-weight: bold;
+}
+.header-lower-side>div>h1{
+    font-size: 1.5rem;
+}
+.header-lower-side>button{
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: var(--navbar-color);
+    border: none;
+    border-radius: 20px;
+    height: 40px;
+    width: 100px;
+    transition: all 50ms;
+}
+.header-lower-side>button:hover{
+    background-color: var(--navbar-hover);
+    box-shadow: 0 5px 5px hsl(0, 0%, 80%);
+}
+.header-lower-side>button:active{
+    transform: translateY(5px);
+    box-shadow: none;
 }
