@@ -1,80 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <nav>
-        <div class="dashboard-menu-points">
-            <img src="./assets/icons/view-dashboard.svg" alt="dashboard">
-            <p>Dashboard</p>
-        </div>
-        <div class="dashboard-menu-points">
-            <img src="./assets/icons/home.svg" alt="home">
-            <p>Home</p>
-        </div>
-        <div class="dashboard-menu-points">
-            <img src="./assets/icons/profile.svg" alt="profile">
-            <p>Profile</p>
-        </div>
-        <div class="dashboard-menu-points">
-            <img src="./assets/icons/message.svg" alt="Messages">
-            <p>Messages</p>
-        </div>
-        <div class="dashboard-menu-points">
-            <img src="./assets/icons/history.svg" alt="History">
-            <p>History</p>
-        </div>
-        <div class="dashboard-menu-points">
-            <img src="./assets/icons/note-multiple.svg" alt="Tasks">
-            <p>Tasks</p>
-        </div>
-        <div class="dashboard-menu-points">
-            <img src="./assets/icons/communities.svg" alt="Communities">
-            <p>Communities</p>
-        </div>
-        <br>
-        <br>
-        <div class="dashboard-menu-points">
-            <img src="./assets/icons/cog.svg" alt="Settings">
-            <p>Settings</p>
-        </div>
-        <div class="dashboard-menu-points">
-            <img src="./assets/icons/help-box.svg" alt="Support">
-            <p>Support</p>
-        </div>
-        <div class="dashboard-menu-points">
-            <img src="./assets/icons/shield-check.svg" alt="Privacy">
-            <p>Privacy</p>
-        </div>
+      <div class="dashboard-menu-points">
+        <img src="./assets/icons/view-dashboard.svg" alt="dashboard" />
+        <p>Dashboard</p>
+      </div>
+      <div class="dashboard-menu-points">
+        <img src="./assets/icons/home.svg" alt="home" />
+        <p>Home</p>
+      </div>
+      <div class="dashboard-menu-points">
+        <img src="./assets/icons/profile.svg" alt="profile" />
+        <p>Profile</p>
+      </div>
+      <div class="dashboard-menu-points">
+        <img src="./assets/icons/message.svg" alt="Messages" />
+        <p>Messages</p>
+      </div>
+      <div class="dashboard-menu-points">
+        <img src="./assets/icons/history.svg" alt="History" />
+        <p>History</p>
+      </div>
+      <div class="dashboard-menu-points">
+        <img src="./assets/icons/note-multiple.svg" alt="Tasks" />
+        <p>Tasks</p>
+      </div>
+      <div class="dashboard-menu-points">
+        <img src="./assets/icons/communities.svg" alt="Communities" />
+        <p>Communities</p>
+      </div>
+      <br />
+      <br />
+      <div class="dashboard-menu-points">
+        <img src="./assets/icons/cog.svg" alt="Settings" />
+        <p>Settings</p>
+      </div>
+      <div class="dashboard-menu-points">
+        <img src="./assets/icons/help-box.svg" alt="Support" />
+        <p>Support</p>
+      </div>
+      <div class="dashboard-menu-points">
+        <img src="./assets/icons/shield-check.svg" alt="Privacy" />
+        <p>Privacy</p>
+      </div>
     </nav>
     <div>
-        <header>
-            <div class="header-upper-side">
-                <img id="svgImg" src="./assets/icons/magnify.svg" alt="search">
-                <input type="text">
-                <img id="svgImg" src="./assets/icons/bell-ring-outline.svg" alt="">
-                <img src="./assets/OIP.webp" alt="">
-                <h3>Morgan Oakley</h3>
+      <header>
+        <div class="header-upper-side">
+          <img id="svgImg" src="./assets/icons/magnify.svg" alt="search" />
+          <input type="text" />
+          <img id="svgImg" src="./assets/icons/bell-ring-outline.svg" alt="" />
+          <img src="./assets/profilePic.jpg" alt="" />
+          <h3>Morgan Oakley</h3>
+        </div>
+        <div class="header-lower-side">
+          <img src="./assets/profilePic.jpg" alt="" />
+          <div>
+            <p>Hi there,</p>
+            <h1>Morgan Oakley (@morgan)</h1>
+          </div>
+          <button>New</button>
+          <button>Upload</button>
+          <button>Share</button>
+        </div>
+      </header>
+      <main>
+        <div>
+          <h3>Your Projects</h3>
+          <div class="feed-container">
+            <div class="feed-element">
+              <h4>Super Cool Project</h4>
+              <p>
+                Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin
+                nibh erat, id facilisis felis accumsan nec-
+              </p>
+              <div>
+                <img
+                  class="feed-icons"
+                  src="./assets/icons/star-plus.svg"
+                  alt=""
+                />
+                <img
+                  class="feed-icons"
+                  src="./assets/icons/eye-plus-outline.svg"
+                  alt=""
+                />
+                <img
+                  class="feed-icons"
+                  src="./assets/icons/source-branch.svg"
+                  alt=""
+                />
+              </div>
             </div>
-            <div class="header-lower-side">
-                <img src="./assets/OIP.webp" alt="">
+            <div class="feed-element">
+              <h4>Less Cool Project</h4>
+              <p>
+                Nullam condimentum ipsum ut lectus vehicula consectetur. Quisque
+                sed dolor tincidunt, consectetur sapien et, facilisis dolor.
+                Duis sem purus, dignissim ut sapien in, varius pellentesque
+                lacus.
+              </p>
+              <div>
+                <img
+                  class="feed-icons"
+                  src="./assets/icons/star-plus.svg"
+                  alt=""
+                />
+                <img
+                  class="feed-icons"
+                  src="./assets/icons/eye-plus-outline.svg"
+                  alt=""
+                />
+                <img
+                  class="feed-icons"
+                  src="./assets/icons/source-branch.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="feed-element">
+              <h4>Impossible App</h4>
+              <p>
+                In hac habitasse platea dictumst. Vivamus dictum rutrum arcu, a
+                placerat velit sagittis id.
+              </p>
+              <div>
+                <img
+                  class="feed-icons"
+                  src="./assets/icons/star-plus.svg"
+                  alt=""
+                />
+                <img
+                  class="feed-icons"
+                  src="./assets/icons/eye-plus-outline.svg"
+                  alt=""
+                />
+                <img
+                  class="feed-icons"
+                  src="./assets/icons/source-branch.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="feed-element">
+              <h4>Easy Peasy App</h4>
+              <p>
+                Etiam cursus eros ac efficitur fringilla. Vestibulum dignissim
+                urna eget accumsan aliquam. Curabitur dignissim nisi in tortor
+                commodo, ac bibendum magna tincidunt.
+              </p>
+              <div>
+                <img
+                  class="feed-icons"
+                  src="./assets/icons/star-plus.svg"
+                  alt=""
+                />
+                <img
+                  class="feed-icons"
+                  src="./assets/icons/eye-plus-outline.svg"
+                  alt=""
+                />
+                <img
+                  class="feed-icons"
+                  src="./assets/icons/source-branch.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="feed-element">
+              <h4>Ad Blocker</h4>
+              <p>
+                Quisque eget rutrum nisl. Nam augue justo, cursus vitae metus
+                vel, pharetra hendrerit felis. Aliquam sed malesuada erOS.
+              </p>
+              <div>
+                <img
+                  class="feed-icons"
+                  src="./assets/icons/star-plus.svg"
+                  alt=""
+                />
+                <img
+                  class="feed-icons"
+                  src="./assets/icons/eye-plus-outline.svg"
+                  alt=""
+                />
+                <img
+                  class="feed-icons"
+                  src="./assets/icons/source-branch.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="feed-element">
+              <h4>Money Maker</h4>
+              <p>
+                Praesent convallis, libero quis congue elementum, nunc ante
+                faucibus sapien, ac scelerisque tortor purus sit amet ex.
+                Pellentesque mollis nec sem vel aliquam.
+              </p>
+              <div>
+                <img
+                  class="feed-icons"
+                  src="./assets/icons/star-plus.svg"
+                  alt=""
+                />
+                <img
+                  class="feed-icons"
+                  src="./assets/icons/eye-plus-outline.svg"
+                  alt=""
+                />
+                <img
+                  class="feed-icons"
+                  src="./assets/icons/source-branch.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="side-informations">
+          <h3>Announcements</h3>
+          <div class="announcements">
+            <div>
+              <h4 class="feed-header">Site Maintenance</h4>
+              <p class="feed-paragrapf">
+                Vestibulum condimentum tellus lacus, in accumsan elit maxi mus
+                ac. Donec hendretit sodales congue...
+              </p>
+            </div>
+            <hr />
+            <div>
+              <h4 class="feed-header">Community Share Day</h4>
+              <p class="feed-paragrapf">
+                Nam vel lectus tincidunt, rutrum nulla eu, ornare libero.
+                Aliquam dictum accumsan porttitor._
+              </p>
+            </div>
+            <hr />
+            <div>
+              <h4 class="feed-header">Updated Privacy Policy</h4>
+              <p class="feed-paragrapf">
+                Phasellus efficitur nisi eget elit consectetur, eget condimentum
+                ante auctor. Cras fringilla sagittis sem in mattig...
+              </p>
+            </div>
+          </div>
+          <div class="trending-container">
+            <h3>Trending</h3>
+            <div class="trending">
+              <div class="trending-element">
+                <img src="./assets/profilePic.jpg" alt="" />
                 <div>
-                    <p>Hi there,</p>
-                    <h1>Morgan Oakley (@morgan)</h1>
+                  <p>@tegan</p>
+                  <p>World Peace Builder</p>
                 </div>
-                <button>New</button>
-                <button>Upload</button>
-                <button>Share</button>
+              </div>
+              <div class="trending-element">
+                <img src="./assets/profilePic.jpg" alt="" />
+                <div>
+                  <p>@morgan</p>
+                  <p>Super Cool Project</p>
+                </div>
+              </div>
+              <div class="trending-element">
+                <img src="./assets/profilePic.jpg" alt="" />
+                <div>
+                  <p>@kendall</p>
+                  <p>Life Changłng App</p>
+                </div>
+              </div>
+              <div class="trending-element">
+                <img src="./assets/profilePic.jpg" alt="" />
+                <div>
+                  <p>@alex</p>
+                  <p>No Traffic Maker</p>
+                </div>
+              </div>
             </div>
-        </header>
-        <main></main>
+          </div>
+        </div>
+      </main>
     </div>
-</body>
-
+  </body>
 </html>

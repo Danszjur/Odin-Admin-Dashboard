@@ -1,147 +1,263 @@
-:root{
-    --navbar-color: hsl(188, 77%, 40%);
-    --navbar-hover: hsl(188, 77%, 30%);
-    --navbar-active: hsl(188, 77%, 25%);
+:root {
+  --navbar-color: hsl(188, 77%, 40%);
+  --navbar-hover: hsl(188, 77%, 30%);
+  --navbar-active: hsl(188, 77%, 25%);
 }
 
 @font-face {
-    font-family: "roboto-regular";
-    src: url(./assets/Roboto/static/Roboto_Condensed-Regular.ttf);
+  font-family: "roboto-regular";
+  src: url(./assets/Roboto/static/Roboto_Condensed-Regular.ttf);
 }
-body{
-    margin: 0;
-    font-family: "roboto-regular";
-    display: grid;
-    grid-template-columns: 260px 1fr;
-    height: 100vh;
-    width: 100vw;
+body {
+  margin: 0;
+  font-family: "roboto-regular";
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  height: 100vh;
+  width: 100vw;
+  background-color: hsl(0, 0%, 88%);
+}
+main {
+  display: grid;
+  grid-template-columns: 800px 1fr;
+  justify-content: center;
+  justify-items: end;
+}
+h3 {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 /*====================================================================*/
-.dashboard-menu-points>img{
-    height: 30px;
-    width: 30px;
-    vertical-align: middle;
-    margin-left: 20px;
+.dashboard-menu-points > img {
+  height: 30px;
+  width: 30px;
+  vertical-align: middle;
+  margin-left: 20px;
 }
-nav>div>p{
-    display: inline-block;
-    margin-left: 10px;
+nav > div > p {
+  display: inline-block;
+  margin-left: 10px;
 }
-.dashboard-menu-points{
-    align-items: center;
-    transition: all;
-    transition-duration: 50ms;
-    user-select: none;
-    cursor: pointer;
+.dashboard-menu-points {
+  align-items: center;
+  transition: all;
+  transition-duration: 50ms;
+  user-select: none;
+  cursor: pointer;
 }
-br{
-    user-select: none;
+br {
+  user-select: none;
+}
+nav > *:not(:first-child):hover {
+  background-color: var(--navbar-hover);
+}
+nav > *:not(:first-child):active {
+  background-color: var(--navbar-active);
+}
+nav {
+  width: 100%;
+  background-color: var(--navbar-color);
+  height: 100%;
 
+  display: flex;
+  flex-direction: column;
 }
-nav>*:not(:first-child):hover{
-    background-color: var(--navbar-hover);
+nav > .dashboard-menu-points:first-child > img {
+  width: 50px;
+  height: 50px;
 }
-nav>*:not(:first-child):active{
-    background-color: var(--navbar-active);
-}
-nav{
-    width: 100%;
-    background-color: var(--navbar-color);
-    height: 100%;
-
-    display: flex;
-    flex-direction: column;
-}
-nav>.dashboard-menu-points:first-child>img{
-    width: 50px;
-    height: 50px;
-}
-nav>.dashboard-menu-points:first-child>p{
-    font-size: 1.6rem;
+nav > .dashboard-menu-points:first-child > p {
+  font-size: 1.6rem;
 }
 /*============================================================================================*/
-#svgImg{
-    height: 30px;
-    width: 30px;
-    padding: 0px;
-    background-color: none;
-    transition-property: all;
-    transition-duration: 100ms;
+#svgImg,
+.feed-icons {
+  height: 30px;
+  width: 30px;
+  padding: 0px;
+  background-color: none;
+  transition-property: all;
+  transition-duration: 100ms;
 }
-#svgImg:hover{
-    background-color: hsl(0, 0%, 80%);
-    padding: 10px;
+#svgImg:hover,
+.feed-icons:hover {
+  background-color: hsl(0, 0%, 80%);
+  padding: 10px;
 }
-#svgImg:active{
-    background-color: hsl(0, 0%, 90%);
+#svgImg:active,
+.feed-icons:active {
+  background-color: hsl(0, 0%, 90%);
 }
 /*============================================================================================*/
-header{
-    display: flex;
-    flex-direction: column;
+header {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 10px hsl(0, 0%, 70%);
 }
-.header-upper-side>img{
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    object-fit: cover;
+.header-lower-side,
+.header-upper-side {
+  background-color: hsl(0, 0%, 97%);
 }
-.header-upper-side{
-    align-items: center;
-    justify-items: center;
-    display: grid;
-    grid-template-columns: 80px 780px 100px 100px 200px;
-    height: 80px;
+.header-upper-side > img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
 }
-.header-upper-side>input{
-    width: 80%;
-    padding: 10px 20px;
-    border-radius: 40px;
-    border: none;
-    background-color: hsl(0, 0%, 90%);
-    justify-self: baseline;
+.header-upper-side {
+  align-items: center;
+  justify-items: center;
+  display: grid;
+  grid-template-columns: 80px auto 100px 100px 200px;
+  height: 80px;
 }
-h3{
-    display: inline-block;
+.header-upper-side > input {
+  width: 80%;
+  padding: 10px 20px;
+  border-radius: 40px;
+  border: none;
+  background-color: hsl(0, 0%, 90%);
+  justify-self: baseline;
 }
-.header-lower-side{
-    display: grid;
-    grid-template-columns: 150px 650px repeat(3, 120px);
-    height: 100px;
-    vertical-align: middle;
-    align-items: center;
+h3 {
+  display: inline-block;
 }
-.header-lower-side>img{
-    height: 80px;
-    width: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    justify-self: end;
-    vertical-align: middle;
-    margin-right: 30px;
+.header-lower-side {
+  display: grid;
+  grid-template-columns: 150px auto repeat(3, 120px);
+  height: 100px;
+  vertical-align: middle;
+  align-items: center;
 }
-.header-lower-side>div>p{
-    font-weight: bold;
+.header-lower-side > img {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  justify-self: end;
+  vertical-align: middle;
+  margin-right: 30px;
+  cursor: pointer;
 }
-.header-lower-side>div>h1{
-    font-size: 1.5rem;
+.header-lower-side > div > p {
+  font-weight: bold;
+  user-select: none;
 }
-.header-lower-side>button{
-    font-size: 1rem;
-    font-weight: bold;
-    color: white;
-    background-color: var(--navbar-color);
-    border: none;
-    border-radius: 20px;
-    height: 40px;
-    width: 100px;
-    transition: all 50ms;
+.header-lower-side > div > h1 {
+  font-size: 1.5rem;
+  user-select: none;
 }
-.header-lower-side>button:hover{
-    background-color: var(--navbar-hover);
-    box-shadow: 0 5px 5px hsl(0, 0%, 80%);
+.header-lower-side > button {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: var(--navbar-color);
+  border: none;
+  border-radius: 20px;
+  height: 40px;
+  width: 100px;
+  transition: all 50ms;
 }
-.header-lower-side>button:active{
-    transform: translateY(5px);
-    box-shadow: none;
+.header-lower-side > button:hover {
+  background-color: var(--navbar-hover);
+  box-shadow: 0 5px 5px hsl(0, 0%, 80%);
+}
+.header-lower-side > button:active {
+  transform: translateY(5px);
+  box-shadow: none;
+}
+/*=================================================================*/
+.feed-icons {
+  border-radius: 50%;
+  user-select: none;
+  width: 25px;
+  height: 25px;
+  padding: 10px;
+}
+.feed-element {
+  width: 300px;
+  height: 150px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+
+  border-left: orange 10px solid;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  font-size: 1rem;
+
+  box-shadow: 0 10px 10px hsl(0, 0%, 70%);
+}
+.feed-element > p,
+.feed-element > h4,
+.feed-header {
+  margin: 0px;
+  user-select: none;
+}
+.feed-element > p,
+.feed-paragrapf {
+  opacity: 0.65;
+}
+.feed-element > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  margin-top: auto;
+}
+.feed-container {
+  display: grid;
+  grid-template-columns: repeat(2, 330px);
+  grid-template-rows: repeat(3, 180px);
+  grid-gap: 40px;
+}
+main > div:first-child {
+  margin: 20px;
+}
+/*=================================================================*/
+.side-informations {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.announcements,
+.trending {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  width: 250px;
+  margin-top: 40px;
+  margin-right: 40px;
+  box-shadow: 0 10px 10px hsl(0, 0%, 70%);
+}
+.trending > div {
+  display: flex;
+  flex-direction: column;
+}
+.trending > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.trending-element {
+  margin-bottom: 20px;
+}
+.trending-element > div > p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 20px;
+}
+.trending-element > div > p:last-child {
+  opacity: 0.7;
+}
+
+.trending > div > img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.trending-container {
 }
